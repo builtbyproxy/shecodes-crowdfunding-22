@@ -1,7 +1,15 @@
 import React from 'react'
+import { allProjects } from '../data'
+import ProjectCard from '../components/projectCard'
 
 function HomePage() {
-  return <h1>This is a Home Page</h1>
+  return (
+    <div>
+      {allProjects.map((project, index) => (
+        <ProjectCard key={index} project={project}/>
+      ))}
+    </div>
+  )
 }
 
 export default HomePage
